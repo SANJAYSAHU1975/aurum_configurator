@@ -36,6 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# backup and history
+src_backup
+src_backup_*
+src - Copy
+chat_history
+00_BACKUP/
+nul
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
