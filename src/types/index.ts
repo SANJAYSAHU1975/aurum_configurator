@@ -1,4 +1,4 @@
-export type BrandId = 'luxuria' | 'modura' | 'nivasa';
+export type BrandId = 'luxuria' | 'modura' | 'nivasa' | 'nomad';
 
 export interface Theme {
   id: string;

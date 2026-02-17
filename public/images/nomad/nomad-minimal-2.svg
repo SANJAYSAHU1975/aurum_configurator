@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0c1f2c"/>
+  <rect x="10" y="10" width="380" height="280" fill="none" stroke="#2ec4b6" stroke-width="0.5" opacity="0.15"/>
+  <!-- Minimal interior icon: desk + chair -->
+  <g transform="translate(200, 105)" opacity="0.25">
+    <!-- Desk -->
+    <rect x="-35" y="0" width="70" height="5" fill="none" stroke="#2ec4b6" stroke-width="1.5"/>
+    <line x1="-30" y1="5" x2="-30" y2="30" stroke="#2ec4b6" stroke-width="1"/>
+    <line x1="30" y1="5" x2="30" y2="30" stroke="#2ec4b6" stroke-width="1"/>
+    <!-- Chair -->
+    <rect x="40" y="-5" width="15" height="25" rx="2" fill="none" stroke="#2ec4b6" stroke-width="1"/>
+    <line x1="42" y1="20" x2="42" y2="30" stroke="#2ec4b6" stroke-width="0.8"/>
+    <line x1="53" y1="20" x2="53" y2="30" stroke="#2ec4b6" stroke-width="0.8"/>
+    <!-- Pendant light -->
+    <line x1="0" y1="-40" x2="0" y2="-25" stroke="#2ec4b6" stroke-width="0.8"/>
+    <circle cx="0" cy="-22" r="8" fill="none" stroke="#2ec4b6" stroke-width="1"/>
+  </g>
+  <text x="200" y="195" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="600" fill="#2ec4b6">Urban Minimal</text>
+  <text x="200" y="217" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#80cbc4" opacity="0.6">Interior View</text>
+  <line x1="170" y1="230" x2="230" y2="230" stroke="#2ec4b6" stroke-width="0.5" opacity="0.3"/>
+  <text x="200" y="258" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#5a8a85" opacity="0.4">NOMAD Collection</text>
+</svg>

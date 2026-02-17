@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0c1f2c"/>
+  <rect x="10" y="10" width="380" height="280" fill="none" stroke="#2ec4b6" stroke-width="0.5" opacity="0.15"/>
+  <!-- Interior icon: sofa outline -->
+  <g transform="translate(200, 110)" opacity="0.25">
+    <rect x="-40" y="-10" width="80" height="30" rx="3" fill="none" stroke="#2ec4b6" stroke-width="1.5"/>
+    <rect x="-45" y="-15" width="15" height="40" rx="3" fill="none" stroke="#2ec4b6" stroke-width="1"/>
+    <rect x="30" y="-15" width="15" height="40" rx="3" fill="none" stroke="#2ec4b6" stroke-width="1"/>
+    <!-- Lamp -->
+    <line x1="55" y1="-30" x2="55" y2="20" stroke="#2ec4b6" stroke-width="1"/>
+    <path d="M 45 -30 L 65 -30 L 60 -20 L 50 -20 Z" fill="none" stroke="#2ec4b6" stroke-width="1"/>
+  </g>
+  <text x="200" y="185" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="600" fill="#2ec4b6">Tropical Resort</text>
+  <text x="200" y="207" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#80cbc4" opacity="0.6">Interior View</text>
+  <line x1="170" y1="220" x2="230" y2="220" stroke="#2ec4b6" stroke-width="0.5" opacity="0.3"/>
+  <text x="200" y="250" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#5a8a85" opacity="0.4">NOMAD Collection</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1f2c"/>
+      <stop offset="100%" stop-color="#0a1822"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2ec4b6"/>
+      <stop offset="100%" stop-color="#1a9e92"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <!-- Decorative lines -->
+  <line x1="100" y1="150" x2="700" y2="150" stroke="#2ec4b6" stroke-width="0.5" opacity="0.15"/>
+  <line x1="100" y1="350" x2="700" y2="350" stroke="#2ec4b6" stroke-width="0.5" opacity="0.15"/>
+  <line x1="150" y1="100" x2="150" y2="400" stroke="#2ec4b6" stroke-width="0.5" opacity="0.1"/>
+  <line x1="650" y1="100" x2="650" y2="400" stroke="#2ec4b6" stroke-width="0.5" opacity="0.1"/>
+  <!-- Corner accents -->
+  <path d="M 80 120 L 80 100 L 100 100" fill="none" stroke="#2ec4b6" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 720 100 L 720 120" fill="none" stroke="#2ec4b6" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 700 100 L 720 100" fill="none" stroke="#2ec4b6" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 80 380 L 80 400 L 100 400" fill="none" stroke="#2ec4b6" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 700 400 L 720 400 L 720 380" fill="none" stroke="#2ec4b6" stroke-width="1.5" opacity="0.4"/>
+  <!-- Brand name -->
+  <text x="400" y="225" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="64" font-weight="300" letter-spacing="18" fill="#2ec4b6">NOMAD</text>
+  <!-- Tagline -->
+  <text x="400" y="275" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="300" letter-spacing="4" fill="#80cbc4" opacity="0.7">Luxury Suites for Resorts &amp; Airbnb</text>
+  <!-- Subtitle -->
+  <text x="400" y="320" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#5a8a85" letter-spacing="2">FACTORY-BUILT  |  45-DAY DELIVERY  |  TURNKEY</text>
+  <!-- Bottom brand -->
+  <text x="400" y="460" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#2ec4b6" opacity="0.25" letter-spacing="3">BY AURUM LIFE SPACES</text>
+</svg>

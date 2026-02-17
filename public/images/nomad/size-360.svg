@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .room { fill: none; stroke: #2ec4b6; stroke-width: 0.8; opacity: 0.6; }
+      .wall { stroke: #2ec4b6; stroke-width: 1.5; fill: none; opacity: 0.8; }
+      .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #e0f2f1; text-anchor: middle; }
+      .label-sm { font-family: 'Segoe UI', Arial, sans-serif; font-size: 8px; fill: #80cbc4; text-anchor: middle; }
+      .dim { font-family: 'Segoe UI', Arial, sans-serif; font-size: 8px; fill: #5a8a85; text-anchor: middle; }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #2ec4b6; font-weight: 600; text-anchor: middle; }
+      .door { fill: none; stroke: #2ec4b6; stroke-width: 0.6; opacity: 0.5; }
+    </style>
+  </defs>
+  <rect width="400" height="300" fill="#0c1f2c"/>
+  <rect x="0" y="0" width="400" height="28" fill="#2ec4b6" opacity="0.08"/>
+  <text x="200" y="19" class="title">360 sqft — Studio Suite</text>
+  <line x1="55" y1="38" x2="345" y2="38" stroke="#2ec4b6" stroke-width="0.3" opacity="0.3"/>
+  <line x1="55" y1="35" x2="55" y2="41" stroke="#2ec4b6" stroke-width="0.3" opacity="0.3"/>
+  <line x1="345" y1="35" x2="345" y2="41" stroke="#2ec4b6" stroke-width="0.3" opacity="0.3"/>
+  <text x="200" y="36" class="dim">24' - 0" x 15' - 0"</text>
+  <!-- Main unit outline -->
+  <rect x="55" y="48" width="220" height="235" class="wall"/>
+  <!-- Private Deck -->
+  <rect x="275" y="48" width="70" height="235" class="room" stroke-dasharray="6,3"/>
+  <text x="310" y="165" class="label-sm">Private</text>
+  <text x="310" y="178" class="label-sm">Deck</text>
+  <text x="310" y="192" class="dim">7' x 15'</text>
+  <!-- Bed area (top left) -->
+  <rect x="55" y="48" width="120" height="110" class="room"/>
+  <text x="115" y="98" class="label">Bed Area</text>
+  <text x="115" y="112" class="dim">12' x 8'</text>
+  <!-- Living area (top right) -->
+  <rect x="175" y="48" width="100" height="110" class="room"/>
+  <text x="225" y="98" class="label">Living</text>
+  <text x="225" y="112" class="dim">10' x 8'</text>
+  <!-- Kitchenette (bottom left) -->
+  <rect x="55" y="158" width="100" height="125" class="room"/>
+  <text x="105" y="218" class="label">Kitchenette</text>
+  <text x="105" y="232" class="dim">10' x 7'</text>
+  <!-- Kitchen counter -->
+  <rect x="59" y="162" width="50" height="6" fill="#2ec4b6" opacity="0.15"/>
+  <!-- Bathroom -->
+  <rect x="155" y="158" width="120" height="125" class="room"/>
+  <text x="215" y="218" class="label">Bathroom</text>
+  <text x="215" y="232" class="dim">12' x 7'</text>
+  <!-- Glass door to deck indicator -->
+  <line x1="275" y1="80" x2="275" y2="130" stroke="#2ec4b6" stroke-width="2" opacity="0.4" stroke-dasharray="2,2"/>
+  <!-- Entry indicator -->
+  <rect x="50" y="100" width="10" height="20" fill="#2ec4b6" opacity="0.25"/>
+  <text x="340" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#2ec4b6" opacity="0.4" text-anchor="end">NOMAD</text>
+</svg>

@@ -20,6 +20,10 @@ const themeExtMap: Record<string, string> = {
   'mod-genz-1': 'png',       'mod-genz-2': 'png',
   // NIVASA
   'niv-modern-1': 'png',  'niv-modern-2': 'jpg',
+  // NOMAD
+  'nomad-tropical-1': 'svg', 'nomad-tropical-2': 'svg',
+  'nomad-mountain-1': 'svg', 'nomad-mountain-2': 'svg',
+  'nomad-minimal-1': 'svg',  'nomad-minimal-2': 'svg',
 };
 
 // Size image extension map: key = "{brandId}-{sqft}", value = extension
@@ -37,6 +41,9 @@ const sizeExtMap: Record<string, string> = {
   'nivasa-600': 'svg',
   'nivasa-900': 'svg',
   'nivasa-1200': 'svg',
+  // NOMAD
+  'nomad-360': 'svg',
+  'nomad-540': 'svg',
 };
 
 function themeExt(themeId: string, index: number): string {

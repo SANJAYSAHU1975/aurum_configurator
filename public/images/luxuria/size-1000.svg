@@ -1,7 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
-  <rect width="600" height="400" fill="#1a1a1a"/>
-  <rect x="2" y="2" width="596" height="396" fill="none" stroke="#d4a853" stroke-width="1" stroke-dasharray="8,4" opacity="0.3"/>
-  <text x="300" y="188" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#d4a853">1000 sqft</text>
-  <text x="300" y="212" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#d4a853" opacity="0.7">Compact Luxury — 2BHK Floor Plan</text>
-  <text x="300" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#d4a853" opacity="0.4">600x400 — Replace with your image</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <style>
+      .room { fill: none; stroke: #5a4a3a; stroke-width: 1; }
+      .room-fill { fill: #f5f0e8; }
+      .wall { stroke: #3a2a1a; stroke-width: 2; fill: none; }
+      .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #5a4a3a; text-anchor: middle; }
+      .label-sm { font-family: 'Segoe UI', Arial, sans-serif; font-size: 8px; fill: #8a7a6a; text-anchor: middle; }
+      .dim { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; fill: #999; text-anchor: middle; }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #d4a853; font-weight: 600; text-anchor: middle; }
+      .door { fill: none; stroke: #5a4a3a; stroke-width: 0.8; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f5f0e8"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="400" height="28" fill="#d4a853" opacity="0.12"/>
+  <text x="200" y="19" class="title">1000 sqft — 2BHK</text>
+  <!-- Dimension line -->
+  <line x1="30" y1="38" x2="370" y2="38" stroke="#bbb" stroke-width="0.5"/>
+  <line x1="30" y1="35" x2="30" y2="41" stroke="#bbb" stroke-width="0.5"/>
+  <line x1="370" y1="35" x2="370" y2="41" stroke="#bbb" stroke-width="0.5"/>
+  <text x="200" y="36" class="dim">40' - 0" x 25' - 0"</text>
+  <!-- Outer walls -->
+  <rect x="30" y="45" width="340" height="240" class="wall"/>
+  <!-- Entry Foyer (double height) -->
+  <rect x="30" y="45" width="80" height="80" class="room"/>
+  <text x="70" y="82" class="label">Entry</text>
+  <text x="70" y="93" class="label-sm">Foyer (DH)</text>
+  <text x="70" y="120" class="dim">8' x 10'</text>
+  <!-- Living + Dining -->
+  <rect x="110" y="45" width="150" height="120" class="room"/>
+  <text x="185" y="98" class="label">Living + Dining</text>
+  <text x="185" y="112" class="dim">15' x 12'</text>
+  <!-- Kitchen -->
+  <rect x="260" y="45" width="110" height="70" class="room"/>
+  <text x="315" y="82" class="label">Kitchen</text>
+  <text x="315" y="95" class="dim">11' x 7'</text>
+  <!-- Master Bedroom -->
+  <rect x="30" y="165" width="140" height="120" class="room"/>
+  <text x="100" y="220" class="label">Master Bed</text>
+  <text x="100" y="234" class="dim">14' x 12'</text>
+  <!-- Master Bath -->
+  <rect x="30" y="125" width="80" height="40" class="room"/>
+  <text x="70" y="148" class="label-sm">M. Bath</text>
+  <text x="70" y="158" class="dim">8' x 5'</text>
+  <!-- Bedroom 2 -->
+  <rect x="260" y="165" width="110" height="120" class="room"/>
+  <text x="315" y="220" class="label">Bed - 2</text>
+  <text x="315" y="234" class="dim">11' x 12'</text>
+  <!-- Bath 2 -->
+  <rect x="260" y="115" width="110" height="50" class="room"/>
+  <text x="315" y="143" class="label-sm">Bath - 2</text>
+  <text x="315" y="155" class="dim">11' x 5'</text>
+  <!-- Passage -->
+  <rect x="170" y="165" width="90" height="120" class="room" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="215" y="230" class="label-sm">Passage</text>
+  <!-- Door arcs (simplified) -->
+  <path d="M 108 85 Q 100 85 100 77" class="door"/>
+  <path d="M 168 220 Q 168 212 176 212" class="door"/>
+  <path d="M 262 220 Q 262 212 254 212" class="door"/>
+  <!-- Brand mark -->
+  <text x="370" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="7" fill="#d4a853" opacity="0.5" text-anchor="end">LUXURIA</text>
 </svg>

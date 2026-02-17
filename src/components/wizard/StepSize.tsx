@@ -42,7 +42,7 @@ export default function StepSize() {
         ))}
       </div>
 
-      {selectedSize && (
+      {selectedSize && brand.id !== 'nomad' && (
         <div
           className="mt-6 p-5 border-2 border-dashed rounded-xl"
           style={{ borderColor: `${v?.accent ?? '#10b981'}60`, backgroundColor: v?.cardBgActive ?? '#f0fdf4' }}

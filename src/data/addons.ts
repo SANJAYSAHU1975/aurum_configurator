@@ -5,7 +5,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'kitchen',
     name: 'Kitchen Upgrade',
     category: 'interiors',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'kitchen-basic',
@@ -49,7 +49,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'bathroom',
     name: 'Bathroom Upgrade',
     category: 'interiors',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'bath-basic',
@@ -91,7 +91,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'furniture',
     name: 'Furniture Package',
     category: 'furniture',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'furniture-none',
@@ -120,7 +120,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'furnishing',
     name: 'Furnishing Package',
     category: 'furnishing',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'furnishing-none',
@@ -149,7 +149,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'smarthome',
     name: 'Smart Home Package',
     category: 'technology',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'smart-none',
@@ -193,7 +193,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'solar',
     name: 'Solar Power',
     category: 'energy',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'solar-none',
@@ -261,7 +261,7 @@ export const addonGroups: AddonGroup[] = [
     id: 'terrace',
     name: 'Terrace Garden',
     category: 'structure',
-    brandAvailability: ['luxuria', 'modura', 'nivasa'],
+    brandAvailability: ['luxuria', 'modura', 'nivasa', 'nomad'],
     options: [
       {
         id: 'terrace-no',

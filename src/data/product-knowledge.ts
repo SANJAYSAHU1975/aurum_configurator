@@ -11,8 +11,13 @@ function formatPrice(price: number): string {
 function generateBrandKnowledge(): string {
   return brands
     .map((brand) => {
-      const tierLabel =
-        brand.id === 'luxuria' ? 'Premium Luxury' : brand.id === 'modura' ? 'Mid-Range Modern' : 'Affordable Value';
+      const tierLabels: Record<string, string> = {
+        luxuria: 'Premium Luxury',
+        modura: 'Mid-Range Modern',
+        nivasa: 'Affordable Value',
+        nomad: 'Resort/Airbnb Luxury Suites',
+      };
+      const tierLabel = tierLabels[brand.id] || brand.id;
 
       const themesText = brand.themes
         .map((t) => `  - **${t.name}** (${t.style}) — ${t.description}\n    Features: ${t.keyFeatures.join(', ')}`)
@@ -41,7 +46,7 @@ function generateAddonKnowledge(): string {
   return addonGroups
     .map((group) => {
       const availability =
-        group.brandAvailability.length === 3
+        group.brandAvailability.length === brands.length
           ? 'All brands'
           : group.brandAvailability.map((b) => b.toUpperCase()).join(', ') + ' only';
 
@@ -117,7 +122,7 @@ These rules are NON-NEGOTIABLE. Breaking them could mislead customers and damage
 - Do NOT use your general training knowledge for ANY pricing — only use the data provided below.
 
 ### RULE 3: G+1 (Second Floor) rules:
-- G+1 is available for ALL brands (LUXURIA, MODURA, NIVASA). G+2 is NOT available.
+- G+1 is available for LUXURIA, MODURA, and NIVASA only. NOT available for NOMAD. G+2 is NOT available.
 - G+1 adds the SAME floor area as the ground floor, priced at the brand's per-sqft rate:
   - LUXURIA: G+1 cost = selected sqft × ₹3,500/sqft. So: 1000sqft G+1 = +₹35 Lakhs, 1500sqft G+1 = +₹52.5 Lakhs, 2000sqft G+1 = +₹70 Lakhs.
   - MODURA: G+1 cost = selected sqft × ₹3,000/sqft. So: 800sqft G+1 = +₹24 Lakhs, 1200sqft G+1 = +₹36 Lakhs, 1600sqft G+1 = +₹48 Lakhs.
@@ -125,6 +130,13 @@ These rules are NON-NEGOTIABLE. Breaking them could mislead customers and damage
 - ONLY quote the G+1 prices listed above. Do NOT calculate G+1 for unlisted sizes.
 - If someone asks about G+2, say: "We currently offer G+1 (ground + first floor). G+2 is not available. For larger requirements, we can explore wider floor plans or we will assign a dedicated architect to help."
 - Terrace Garden can be added on top of G+1 for ₹1.5 Lakhs.
+
+### RULE 3B: NOMAD specific rules:
+- NOMAD is for resorts, hotels, and Airbnb properties ONLY. Not for individual homebuyers.
+- Minimum order value: ₹1 Crore (approximately 8+ Studio Suites or 6+ Premium Suites).
+- NO single unit supply. Bulk orders only.
+- NO G+1 stacking. Ground floor only.
+- If someone asks for a single NOMAD unit, say: "NOMAD suites are designed for resort and hospitality projects with a minimum order of ₹1 Crore. For a personal home, I'd recommend our LUXURIA, MODURA, or NIVASA brands."
 
 ### RULE 4: For ANY pricing question you cannot answer from the data below:
 - Say: "I want to give you the most accurate pricing. Let me connect you with our sales team — they can provide a detailed quote based on your exact requirements. You can reach us at [phone/email]."

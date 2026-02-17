@@ -75,6 +75,31 @@ const nivasaVisuals: BrandVisuals = {
   checkColor: '#16a34a',
 };
 
+// ═══════════════════════════════════════════════════════════
+// NOMAD: Dark teal/slate luxury — resort/Airbnb aesthetic
+// ═══════════════════════════════════════════════════════════
+const nomadVisuals: BrandVisuals = {
+  pageBg: '#0c1f2c',
+  cardBg: '#132a3a',
+  cardBorder: '#1e3a4d',
+  cardBorderActive: '#2ec4b6',
+  cardBgActive: '#0f2e35',
+  textPrimary: '#e8f1f2',
+  textSecondary: '#8fb8c9',
+  textMuted: '#5a8a9d',
+  accent: '#2ec4b6',
+  accentHover: '#26a69a',
+  accentText: '#0c1f2c',
+  headerBg: '#091820',
+  headerText: '#e8f1f2',
+  headerSubtext: '#2ec4b6',
+  priceBarBg: '#091820',
+  priceBarText: '#e8f1f2',
+  badgeBg: '#2ec4b6',
+  badgeText: '#0c1f2c',
+  checkColor: '#2ec4b6',
+};
+
 export const brands: Brand[] = [
   {
     id: 'luxuria',
@@ -245,6 +270,62 @@ export const brands: Brand[] = [
       { sqft: 600, label: 'Starter Home', bedrooms: 1, bathrooms: 1, basePrice: 1500000 },
       { sqft: 900, label: 'Growing Family', bedrooms: 2, bathrooms: 1, basePrice: 2250000 },
       { sqft: 1200, label: 'Family Home', bedrooms: 3, bathrooms: 2, basePrice: 3000000 },
+    ],
+  },
+  {
+    id: 'nomad',
+    name: 'NOMAD',
+    tagline: 'Luxury Suites for Resorts & Airbnb',
+    pricePerSqft: 3500,
+    ceilingHeight: '10-12 ft',
+    description:
+      'Premium factory-built luxury suites designed for resorts, hotels, and Airbnb properties. Minimum order value Rs. 1 Crore. No single unit supply. No G+1 stacking.',
+    color: 'teal',
+    visuals: nomadVisuals,
+    themes: [
+      {
+        id: 'nomad-tropical',
+        name: 'Tropical Resort',
+        description: 'Bali-inspired luxury with natural materials, open showers, and private deck',
+        style: 'Tropical Luxury',
+        keyFeatures: [
+          'Indoor-outdoor living with sliding glass walls',
+          'Natural stone & hardwood flooring',
+          'Open-air rain shower + soaking tub',
+          'Private deck / sit-out area',
+          'Resort-grade bathroom amenities',
+        ],
+      },
+      {
+        id: 'nomad-mountain',
+        name: 'Mountain Lodge',
+        description: 'Cozy alpine luxury with fireplace, wood cladding, and panoramic views',
+        style: 'Alpine Luxury',
+        keyFeatures: [
+          'Wood & stone accent walls',
+          'Electric fireplace unit',
+          'Panoramic window wall',
+          'Heated bathroom flooring',
+          'Premium insulation package',
+        ],
+      },
+      {
+        id: 'nomad-minimal',
+        name: 'Urban Minimal',
+        description: 'Clean Japanese-Scandinavian design for city boutique hotels',
+        style: 'Japandi Minimal',
+        keyFeatures: [
+          'Minimalist built-in furniture',
+          'Warm wood + white palette',
+          'Smart room controls (lights, AC, curtains)',
+          'Space-efficient luxury bathroom',
+          'Sound insulation between units',
+        ],
+      },
+    ],
+    sizes: [
+      { sqft: 360, label: 'Studio Suite', bedrooms: 1, bathrooms: 1, basePrice: 1260000 },
+      { sqft: 540, label: 'Premium Suite', bedrooms: 1, bathrooms: 1, basePrice: 1890000 },
     ],
   },
 ];

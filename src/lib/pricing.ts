@@ -26,12 +26,12 @@ export function calculateEstimate(
     const group = addonGroups.find((g) => g.id === groupId);
     if (!group) continue;
     const option = group.options.find((o) => o.id === optionId);
-    if (!option || option.price === 0) continue;
+    if (!option) continue;
 
-    // For G+1 floor, calculate dynamic price based on brand rate
+    // For G+1 floor, calculate dynamic price based on brand rate (price is 0 in data, calculated here)
     if (groupId === 'g1floor' && optionId === 'g1-yes') {
       addonItems.push({ name: 'G+1 Second Floor', price: g1Price });
-    } else {
+    } else if (option.price > 0) {
       addonItems.push({ name: `${group.name}: ${option.name}`, price: option.price });
     }
   }
