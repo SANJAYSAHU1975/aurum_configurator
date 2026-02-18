@@ -56,6 +56,30 @@ export default function WizardShell() {
 
   const StepComponent = stepComponents[currentStep];
 
+  const navButtons = (position: 'top' | 'bottom') => (
+    <div className={`flex justify-between ${position === 'top' ? 'mb-6' : 'mt-8'}`}>
+      <button
+        onClick={prevStep}
+        disabled={currentStep === 0}
+        className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+      >
+        Back
+      </button>
+      {currentStep < 4 && (
+        <button
+          onClick={nextStep}
+          disabled={!proceed}
+          style={proceed ? { backgroundColor: accentColor, color: v?.accentText ?? '#ffffff' } : {}}
+          className={`px-8 py-3 rounded-xl font-bold text-base transition-all cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500 ${
+            showPulse && proceed ? 'animate-bounce shadow-lg scale-105' : ''
+          } ${proceed ? 'shadow-md hover:shadow-lg hover:scale-105' : ''}`}
+        >
+          {currentStep === 3 ? 'Review Estimate →' : 'Next →'}
+        </button>
+      )}
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -79,30 +103,13 @@ export default function WizardShell() {
 
       {/* Step Content */}
       <main className="max-w-4xl mx-auto px-4 py-8 pb-28">
+        {/* Top Navigation */}
+        {navButtons('top')}
+
         <StepComponent />
 
-        {/* Navigation Buttons */}
-        <div className="flex justify-between mt-8">
-          <button
-            onClick={prevStep}
-            disabled={currentStep === 0}
-            className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
-          >
-            Back
-          </button>
-          {currentStep < 4 && (
-            <button
-              onClick={nextStep}
-              disabled={!proceed}
-              style={proceed ? { backgroundColor: accentColor, color: v?.accentText ?? '#ffffff' } : {}}
-              className={`px-8 py-3 rounded-xl font-bold text-base transition-all cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500 ${
-                showPulse && proceed ? 'animate-bounce shadow-lg scale-105' : ''
-              } ${proceed ? 'shadow-md hover:shadow-lg hover:scale-105' : ''}`}
-            >
-              {currentStep === 3 ? 'Review Estimate →' : 'Next →'}
-            </button>
-          )}
-        </div>
+        {/* Bottom Navigation */}
+        {navButtons('bottom')}
 
         {/* Hint text when selection is made */}
         {proceed && currentStep < 3 && (
