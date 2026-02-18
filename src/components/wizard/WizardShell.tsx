@@ -15,6 +15,7 @@ const stepComponents = [StepBrand, StepTheme, StepSize, StepAddons, StepReview];
 export default function WizardShell() {
   const { currentStep, setStep, nextStep, prevStep, brand, theme, size } = useConfiguratorStore();
   const [maxReached, setMaxReached] = useState(0);
+  const [showPulse, setShowPulse] = useState(false);
 
   useEffect(() => {
     if (currentStep > maxReached) {
@@ -31,13 +32,27 @@ export default function WizardShell() {
       case 2:
         return !!size;
       case 3:
-        return true; // Add-ons are optional
+        return true;
       case 4:
-        return false; // Last step
+        return false;
       default:
         return false;
     }
   };
+
+  // Pulse the Next button when user makes a selection
+  useEffect(() => {
+    if (canProceed() && currentStep < 4) {
+      setShowPulse(true);
+      const timer = setTimeout(() => setShowPulse(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [brand, theme, size, currentStep]);
+
+  const proceed = canProceed();
+  const v = brand?.visuals;
+  const accentColor = v?.accent ?? '#2563eb';
 
   const StepComponent = stepComponents[currentStep];
 
@@ -78,13 +93,23 @@ export default function WizardShell() {
           {currentStep < 4 && (
             <button
               onClick={nextStep}
-              disabled={!canProceed()}
-              className="px-8 py-2.5 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              disabled={!proceed}
+              style={proceed ? { backgroundColor: accentColor, color: v?.accentText ?? '#ffffff' } : {}}
+              className={`px-8 py-3 rounded-xl font-bold text-base transition-all cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-500 ${
+                showPulse && proceed ? 'animate-bounce shadow-lg scale-105' : ''
+              } ${proceed ? 'shadow-md hover:shadow-lg hover:scale-105' : ''}`}
             >
-              {currentStep === 3 ? 'Review Estimate' : 'Next'}
+              {currentStep === 3 ? 'Review Estimate →' : 'Next →'}
             </button>
           )}
         </div>
+
+        {/* Hint text when selection is made */}
+        {proceed && currentStep < 3 && (
+          <p className="text-center mt-3 text-sm animate-pulse" style={{ color: accentColor }}>
+            Click &quot;Next →&quot; to continue
+          </p>
+        )}
       </main>
 
       {/* Sticky Price Bar */}

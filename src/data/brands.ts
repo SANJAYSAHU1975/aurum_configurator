@@ -108,7 +108,7 @@ export const brands: Brand[] = [
     pricePerSqft: 3500,
     ceilingHeight: '10-16 ft (Double Height)',
     description:
-      'Ultra-premium prefab homes with 5 curated design themes. Marble floors, Italian kitchens, spa bathrooms, and 150+ WOW features per home.',
+      'Ultra-premium factory-perfected quality homes with 5 curated design themes. RCC structure, marble floors, Italian kitchens, spa bathrooms, and 150+ WOW features per home.',
     color: 'amber',
     visuals: luxuriaVisuals,
     themes: [
@@ -189,7 +189,7 @@ export const brands: Brand[] = [
     name: 'MODURA',
     tagline: 'Smart Living, Modern Design',
     pricePerSqft: 3000,
-    ceilingHeight: '10-12 ft',
+    ceilingHeight: '10 ft',
     description:
       'Quality-certified modern homes for professionals and growing families. Functional design with premium finishes at accessible pricing.',
     color: 'blue',
@@ -246,7 +246,7 @@ export const brands: Brand[] = [
     name: 'NIVASA',
     tagline: 'Your First Home, Your Pride',
     pricePerSqft: 2500,
-    ceilingHeight: '8-10 ft',
+    ceilingHeight: '10 ft',
     description:
       'Affordable, permanent RCC homes for first-time buyers. Practical design, maximum value, and the dignity of real homeownership. G+1 stackable option available.',
     color: 'emerald',

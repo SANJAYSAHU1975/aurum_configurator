@@ -21,9 +21,9 @@ const themeExtMap: Record<string, string> = {
   // NIVASA
   'niv-modern-1': 'png',  'niv-modern-2': 'jpg',
   // NOMAD
-  'nomad-tropical-1': 'svg', 'nomad-tropical-2': 'svg',
-  'nomad-mountain-1': 'svg', 'nomad-mountain-2': 'svg',
-  'nomad-minimal-1': 'svg',  'nomad-minimal-2': 'svg',
+  'nomad-tropical-1': 'png', 'nomad-tropical-2': 'png',
+  'nomad-mountain-1': 'png', 'nomad-mountain-2': 'png',
+  'nomad-minimal-1': 'png',  'nomad-minimal-2': 'png',
 };
 
 // Size image extension map: key = "{brandId}-{sqft}", value = extension
@@ -55,7 +55,8 @@ function sizeExt(brandId: BrandId, sqft: number): string {
 }
 
 export function getBrandHeroImage(brandId: BrandId): string {
-  return `/images/${brandId}/brand-hero.jpg`;
+  const ext = brandId === 'nomad' ? 'png' : 'jpg';
+  return `/images/${brandId}/brand-hero.${ext}`;
 }
 
 export function getThemeImages(brandId: BrandId, themeId: string): string[] {
